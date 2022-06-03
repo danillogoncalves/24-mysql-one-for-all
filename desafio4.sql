@@ -1,6 +1,8 @@
 SELECT 
     U.usuario AS usuario,
-    IF(SUM(IF(YEAR(HR.data_reproducao) >= 2021,
+    -- Depois de conversa com o Leonardo Araujo Silva, Turma 19, Tribo A,
+    -- Mudei o sinal de ">" para "="
+    IF(SUM(IF(YEAR(HR.data_reproducao) = 2021,
 			1,
             0)) > 0,
         'Usuário ativo',
